@@ -1,0 +1,113 @@
+.detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 64px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  position: relative;
+  background:rgba(0, 0, 0, 0.81);
+
+  .button {
+    margin: 420px auto;
+    padding: 10px 10px;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: block;
+    color: #ffe81f;
+    border: 1px solid #ffe81f;
+    z-index: 2;
+    transition: all 0.7s ease;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-1100%);
+    text-decoration: none;
+    &:hover {
+      border-color: #ffe81f;
+      box-shadow: 0 0 8px #ffe81f, 0 0 5px #ffe81f inset;
+    }
+    &:focus {
+      border-color: #ffe81f;
+    }
+  }
+
+  .textWrapper {
+    border-radius: 8px;
+    border: 1px solid #ffe81f;
+    box-shadow: 0 0 8px #ffe81f, 0 0 5px #ffe81f inset;
+    backdrop-filter: blur(1.5px);
+    padding: 2rem;
+    grid-column: 1;
+
+    .title {
+      font-size: 32px;
+      font-weight: 600;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: 3px solid #ffffff86;
+      line-height: 2;
+    }
+
+    .subTitle {
+      font-size: 1.50rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .property {
+      color: #ffe81f;
+    }
+  }
+  
+  .imageWrapper {
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+    display: block;
+    top: 4rem;
+    right: 0;
+
+    img {
+      filter: drop-shadow(0px 0px 10px #ffffff96);
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .base {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+    padding: 0;
+    padding-bottom: 32px;
+    justify-items: center;
+
+    .textWrapper {
+      margin-right: 0;
+
+      .title {
+        font-size: 1.5rem;
+      }
+
+      .subTitle {
+        font-size: 1rem;
+      }
+    }
+
+    .textWrapper {
+      order: 1;
+    }
+
+    .imageWrapper {
+      position: relative;
+      display: block;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
