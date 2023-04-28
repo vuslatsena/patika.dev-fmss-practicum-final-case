@@ -62,3 +62,11 @@ npm run dev
 ```
 npm build
 ```
+
+## Preview
+
+![Alt Text](src/assets/previewImg/ss1.png)
+![Alt Text](src/assets/previewImg/ss2.png)
+![Alt Text](src/assets/previewImg/ss3.png)
+![Alt Text](src/assets/previewImg/ss4.png)
+
