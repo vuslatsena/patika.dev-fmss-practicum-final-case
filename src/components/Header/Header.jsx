@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-
 import starWarsLogo from "../../assets/star-wars-logo.png";
+import openingSound from "../../assets/opening-sound.mp3";
 import { useStarshipsContext } from "../../contexts/StarshipsContext";
-
 import styles from "./Header.module.scss";
 
 export const Header = () => {
   const { search, setSearch, setPage } = useStarshipsContext();
   const [inputValue, setInputValue] = useState("");
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    audioRef.current.addEventListener("loadeddata", () => {
+      audioRef.current.play();
+    });
+  }, []);
 
   const handleChange = (event) => {
     setPage(1);
@@ -55,6 +61,7 @@ export const Header = () => {
           )}
         </div>
       </div>
+      <audio src={openingSound} ref={audioRef} />
     </header>
   );
 };

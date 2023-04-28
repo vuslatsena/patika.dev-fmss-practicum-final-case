@@ -65,7 +65,7 @@
   }
   
   .imageWrapper {
-    animation: float 3s ease-in-out infinite;
+    animation: upDownAnimation 2s ease-in-out infinite;
     position: relative;
     display: block;
     top: 4rem;
@@ -111,3 +111,14 @@
   }
 }
 
+@keyframes upDownAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
